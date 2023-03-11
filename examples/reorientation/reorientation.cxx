@@ -70,6 +70,9 @@ void dae(adouble* derivatives, adouble* path, adouble* states,
     double Ix = 5621.0;
     double Iy = 4547.0;
     double Iz = 2364.0;
+    //double Ix = 1000.0;
+    //double Iy = 1000.0;
+    //double Iz = 1000.0;
 
     adouble dq1     = 0.5*( omega1*q4 - omega2*q3 + omega3*q2 );
     adouble dq2     = 0.5*( omega1*q3 + omega2*q4 - omega3*q1 );
@@ -381,10 +384,10 @@ int main(void)
 
 
     multiplot(t,q,problem.name+": quarternion","time (s)", "q1 q2 q3 q4", "q1 q2 q3 q4", 2, 2,
-                "pdf", "reorientation_q.pdf");
+                "png", "reorientation_q.png");
 
     multiplot(t,u, problem.name+": controls", "time (s)", "u1 u2 u3", "u1 u2 u3", 3, 1,
-               "pdf", "reorientation_u.pdf");
+               "png", "reorientation_u.png");
 
 
 }
